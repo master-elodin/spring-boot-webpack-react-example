@@ -1,0 +1,4 @@
+rootProject.name = 'spring-boot-webpack-example'
+
+include 'service'
+include 'ui'
