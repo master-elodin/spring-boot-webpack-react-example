@@ -1,0 +1,16 @@
+task webpack(type: Exec) {
+    inputs.file("package-lock.json") 
+    inputs.file("webpack.config.js") 
+    inputs.dir("src")
+
+    outputs.dir("dist")
+
+    def osName = System.getProperty("os.name").toLowerCase();
+    def location = osName.contains("windows") ? project.file('node_modules/.bin/webpack.cmd') : project.file('node_modules/.bin/webpack')
+
+    commandLine "${location}", '--config', 'webpack.config.js'
+}
+
+task clean << {
+  delete "${projectDir}/dist/"
+}
