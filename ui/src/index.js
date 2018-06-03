@@ -1,5 +1,7 @@
-$.ajax({
-    url: '/greeting',
+var jQuery = require("jquery-ajax");
+
+jQuery.ajax({
+    url: 'localhost:8080/greeting',
     method: 'GET'
 }).then((data) => {
     var element = document.createElement('div');

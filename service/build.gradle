@@ -33,3 +33,13 @@ dependencies {
 
     testCompile("junit:junit")
 }
+
+task copyUi(type: Copy) {
+    outputs.dir 'src/main/webapp'
+    dependsOn ':ui:webpack'
+
+    from project(':ui').file('dist')
+    into file('src/main/webapp')
+}
+jar.dependsOn copyUi
+run.dependsOn copyUi
