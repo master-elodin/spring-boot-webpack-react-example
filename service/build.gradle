@@ -35,7 +35,9 @@ dependencies {
 }
 
 task copyUi(type: Copy) {
+    inputs.dir "$rootDir/ui"
     outputs.dir 'src/main/webapp'
+
     dependsOn ':ui:webpack'
 
     from project(':ui').file('dist')
