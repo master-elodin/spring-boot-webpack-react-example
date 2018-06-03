@@ -14,11 +14,11 @@ apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
 apply plugin: 'application'
 
-mainClassName = "org.stickman.springbootexample.Application"
+mainClassName = 'org.stickman.springbootexample.Application'
 
 bootJar {
     baseName = 'spring-boot-webpack-example'
-    version =  '0.1.0'
+    version =  '1.0.0'
 }
 
 repositories {
@@ -45,3 +45,4 @@ task copyUi(type: Copy) {
 }
 jar.dependsOn copyUi
 run.dependsOn copyUi
+clean.dependsOn ':ui:clean'

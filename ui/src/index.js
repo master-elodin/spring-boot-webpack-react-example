@@ -1,3 +1,5 @@
+require('./styles/styles.scss');
+
 var jQuery = require("jquery-ajax");
 
 jQuery.ajax({
@@ -6,7 +8,7 @@ jQuery.ajax({
 }).then((data) => {
     var element = document.createElement('div');
     
-    element.innerHTML = `<h2>I've received the following message from the server:</h2><br/><h2 style='font-family: monospace'>${data}</h2>`;
+    element.innerHTML = `<h2 class='initial-message'>I've received the following message from the server:</h2><br/><h2 class='server-message'>${data}</h2>`;
 
     document.body.appendChild(element);
 });

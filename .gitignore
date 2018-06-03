@@ -2,3 +2,5 @@ build/
 bin/
 node_modules/
 .gradle/
+service/src/main/webapp/
+ui/dist/

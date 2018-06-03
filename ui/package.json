@@ -1,5 +1,5 @@
 {
-  "name": "ui",
+  "name": "spring-boot-webpack-example-ui",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -10,7 +10,11 @@
   "author": "Tim VanDoren",
   "license": "ISC",
   "devDependencies": {
+    "css-loader": "^0.28.11",
     "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.0.2",
+    "style-loader": "^0.21.0",
     "webpack": "^4.10.2",
     "webpack-command": "^0.2.0"
   },
