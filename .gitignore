@@ -4,3 +4,6 @@ node_modules/
 .gradle/
 service/src/main/webapp/
 ui/dist/
+**/.project
+**/.settings/
+**/.classpath
