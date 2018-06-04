@@ -35,11 +35,13 @@ File organization:
 ```
 +-- src
 | +-- index.js
+| +-- index.html
 | +-- styles
 |   | +-- styles.scss
 |   | +-- _colors.scss
 +-- package.json
 +-- webpack.config.js
++-- .babelrc
 ```
 
 #### Add Gradle to :ui
