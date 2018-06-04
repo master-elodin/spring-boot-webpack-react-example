@@ -9,7 +9,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Spring Boot with Webpack'
+      title: 'Spring Boot with Webpack',
+      template: "./src/index.html",
+      filename: "./index.html"
     })
   ],
   module:{
@@ -17,6 +19,13 @@ module.exports = {
         {
           test:/\.(s*)css$/,
           use:['style-loader','css-loader', 'sass-loader']
+        },
+        {
+          test: /\.js$/,
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader"
+          }
         }
      ]
   }

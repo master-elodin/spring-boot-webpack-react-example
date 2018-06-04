@@ -19,6 +19,8 @@
     "webpack-command": "^0.2.0"
   },
   "dependencies": {
-    "jquery-ajax": "^2.1.4"
+    "jquery-ajax": "^2.1.4",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0"
   }
 }
